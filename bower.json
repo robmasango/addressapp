@@ -1,0 +1,19 @@
+{
+  "name": "Address App",
+  "version": "1.0.0",
+  "authors": [
+    "Robert Masango <robmasango@gmail.com>"
+  ],
+  "license": "ISC",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib"
+  ],
+  "dependencies": {
+    "angular": "~1.3.16",
+    "angular-route": "~1.3.16"
+  }
+}

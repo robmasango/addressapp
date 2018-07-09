@@ -1,0 +1,27 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "Address App",
+  "main": "client/app.js",
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "start": "node server/server.js",
+    "test": "mocha --timeout 10000"
+  },
+  "author": "Robert Masango",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bower": "1.8.0",
+    "express": "^4.15.2",
+    "pg": "^6.1.4"
+  },
+  "engines": {
+    "node": "6.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5"
+  }
+}

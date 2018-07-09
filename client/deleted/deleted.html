@@ -1,0 +1,65 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#/"><span class="fa fa-home"></span> User Address</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#/address">Address</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#/deleted">Archived <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div ng-if ="count == 0" >
+    <div class="alert alert-info">
+        <strong>Info!</strong> There are currently no archived addresses.
+      </div>
+</div>
+<div ng-if ="data.addresses.length != 0" >
+<div class="container-fluid content" ng-controller="DeletedAddressesController">
+  <div class="row">
+    <div class="col-xs-12 col-lg-8">
+      <h2 class="address-section-header">Archived Addresses</h2>
+      <div class='addreses'>
+          <div class='address' ng-repeat="address in data.addresses">
+            <!-- /row -body- -->
+            <div class="row address-footer">
+              <div class="col">
+                 Street
+                <br />
+                {{ address.streetaddress }}
+              </div>
+              <div class="col">
+                  City
+                 <br />
+                 {{ address.city }}
+               </div>
+               <div class="col">
+                  Country
+                 <br />
+                 {{ address.country }}
+               </div>          
+               <div class="col">
+                 Code
+                 <br />
+                 {{ address.postalcode }}
+               </div>                             
+              <div class="col">
+                  Date
+                  <br  />
+                  {{ address.createdat | date :  "dd.MM.yyyy" }}</p>
+                </div>   
+                <div class="col-md-1"><br /><span class="address-delete fa fa-trash-o" ng-click="deleteAddress(address)" data-toggle="tooltip" data-placement="right" title="Delete"></span></div>
+                <div class="col-md-2"><br /><span class="address-archive fa fa-folder-open" ng-click="editAddress(address)" data-toggle="tooltip" data-placement="right" title="Unarchive"></span></div>                       
+            </div> <!-- /row -footer- -->
+          </div>
+        </div>
+      </div>
+    </div> <!-- /row -->
+  </div>
+</div>
+  
