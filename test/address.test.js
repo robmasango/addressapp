@@ -1,8 +1,4 @@
 process.env.NODE_ENV = 'test';
-  /*
-  * https://scotch.io/tutorials/test-a-node-restful-api-with-mocha-and-chai //Delete later
-  */
-//const requestHandler = require('../server/request-handler.js');
 
 let chai = require('chai');
 let chaiHttp = require('chai-http');
