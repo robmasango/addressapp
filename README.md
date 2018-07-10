@@ -1,4 +1,4 @@
-# addressapp
+# AddressApp
 The app is built on the node, express, postgres and angularjs stack.
 
 Please view below:
