@@ -4,7 +4,6 @@ ADD . /addressapp
 WORKDIR /addressapp
 RUN npm i
 RUN npm install --global bower
-USER bower
 RUN bower install
 EXPOSE 80
 CMD ["npm", "start"]
