@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Address App",
   "main": "client/app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robmasango/addressapp.git"
+  },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install",
     "start": "node server/server.js",
     "test": "mocha --timeout 10000"
   },
